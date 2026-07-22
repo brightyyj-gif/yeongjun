@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,li{list-style: none;} /*불릿제거*/
+        .menu{color: red; font-weight: bold;} /*글자 진하게*/
+        .box p{color: green;}
+        .box1 p:nth-child(1){color: blue;}
+        .box1 p:nth-child(2){color: pink;}
+        form input[type=text]{border: 2px solid blue;}
+        img[alt="강아지1"]{border: 5px solid blue;}
+    </style>
+</head>
+<!-- 바디안에서 id는 한 번만 -->
+<body>
+    <!-- 불릿제거, .menu 글자색 빨간색, 글자 굵게 -->
+    <ul>
+        <li class="menu menu1">홈</li>
+        <li class="menu">소개</li>
+        <li>공지사항</li>
+    </ul>
+<!-- box클래스 안에 있는 p태그만 초록색 -->
+    <div class="box">
+        <p>문장1</p>
+        <p>문장2</p>
+    </div>
+    <!-- .box1 첫번째 p 는 파란색 두번째 p 는 핑크색 -->
+    <div class="box1">
+        <p>문장1</p>
+        <p>문장2</p>
+    </div>
+
+    <form>
+        <input type="text" placeholder="아이디">
+        <input type="password" placeholder="비밀번호">
+        <input type="submit" value="로그인">
+    </form>
+    <hr>
+    <img src="dog1.jpg" width="200" alt="강아지1">
+    <img src="dog2.jpg" width="200" alt="강아지2">
+    <img src="dog3.jpg" width="200" alt="강아지3">
+</body>
+</html>

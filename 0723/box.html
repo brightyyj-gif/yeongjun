@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            background-color: blueviolet;
+            width: 200px;
+            height: 200px;
+            /* 블럭요소는 넓이 높이를 지정할 수 있다. */
+        }
+        .box2{
+            background-color: aqua;
+            width: 25%;
+            height: 200px;
+            /* 높이는 퍼센트로 줄 수 없다 */
+        }
+        .box3{
+            background-color: darkblue;
+            width: 200px;
+            height: 200px;
+            padding-left: 20px; /* 왼쪽 안여백 20px - 전체넓이 220px */
+            margin-left: 50px;
+            margin-bottom: 50px;
+        }
+        .box4{
+            background-color: darksalmon;
+            width: 200px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin: 0 auto; /* 바깥 위 아래 - 0 좌측우측 auto */
+        }
+        /*
+        padding: 10px; 항상 위부터 시계방향 위 오른쪽 아래 왼쪽 안여백 10px
+        padding: 10px 20px 30px 40px; 위부터 시계방향 위 오른쪽 아래 왼쪽
+        margin: 10px; 위  오른쪽 아래 바깥여백여백 10px
+        margin: 10px 20px 30px; 위 10px 왼쪽 오른쪽 20px 아래 30px */
+
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

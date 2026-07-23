@@ -1,0 +1,57 @@
+*{margin: 0;padding: o;}
+.container{
+    width: 1000px;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid #333;
+    margin: 50px auto 0;
+}
+.box{
+    display: inline-block;
+    margin: 25px 15px 0;
+    width: 215px;
+}
+.box img{
+    width: 215px;
+    height: 215px;
+}
+.text{text-align: center;}
+.text span{display:inline-block;}
+/* span 넓이 높이 패딩등을 적용하기 쉽게 inline-block*/
+.text .p1, .text .p2{
+    color: #666;
+    font-size: 13.5px;
+    margin-top: 5px;
+}
+.text .p3 .s1{
+    font-size: 14px;
+    color: #666;
+}
+.text .p3 .s2{
+    font-size: 20px;
+    color: red;
+}
+.p4 span{
+    text-align: center;
+    padding: 2px;
+    margin-top: 7px;
+    width: 40px;
+    height: 18px;
+    font-size: 12px;
+    border-radius: 9px;
+    color:#fff
+    vertical-align middle;
+}
+.sale {
+    background-color: #f65c60;
+}
+.gift{
+    background: #6fcff7;
+}
+.today{
+    background: #f374b7;
+    width: 60px;
+}
+.coupon {
+    background: #9bce26;
+}

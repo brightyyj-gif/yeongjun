@@ -6,7 +6,7 @@ public class Shuffle {
     public static void main(String[] args) {
         int[] numArr = {0,1,2,3,4,5,6,7,8,9};
         
-        for(int i = 0; i <= numArr.length; i++) {
+        for(int i = 0; i < numArr.length; i++) {
             System.out.println(numArr[i]);
         }
         System.out.println();

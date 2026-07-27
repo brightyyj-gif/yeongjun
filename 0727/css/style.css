@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;}
+body{
+    /* 상속되는 것 글씨체, 글씨크기 */
+    font-family: "궁서";
+}
+h1, p{
+    /* 그룹선택자 */
+}
+div p{
+    /* 자손선택자 */
+    background-color: yellow;
+}
+div p:hover{
+    /* 가상클래스 선택자 */
+    background-color: red;
+    color:white
+}
+h3{color: purple}
+.title{
+    color: hotpink;
+    background-color: pink;
+}
+#menu{
+    background-color: pink;
+}

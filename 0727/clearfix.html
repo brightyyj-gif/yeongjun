@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Float & Clearfix</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Malgun Gothic", sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+/* 부모 */
+.container{
+    width:900px;
+    margin:0 auto;
+    background:#fff;
+    border:3px solid red;
+    padding:20px;
+    overflow: hidden;
+    /* 첫번째 방법은 부모인 .container에 overflow: hidden;을 주어 높이를 */
+    /* 두번쨰 방벙은 높이를 입력 */
+    height: 180px;
+}
+
+/* clearfix */
+.container::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/* 카드 */
+.card{
+    width:278px;
+    float:left;
+
+    margin-right:9px;
+
+    background:white;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:20px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+/* 마지막 카드 */
+.card:last-child{
+    margin-right:0;
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#2575fc;
+}
+
+.card p{
+    line-height:1.6;
+}
+.card:nth-child(3){margin-right: 0;}
+/* .clear{clear: both;} */
+/* 줄바꿈이 되면서 높이 유지 */
+/* 클리어픽스 조사 */
+.container::after{
+    content: "adfds";
+    display: block; /*after 인라인요소 */
+    clear: both;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>
+            HTML은 웹페이지의 구조를 만드는 언어입니다.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>
+            CSS는 웹페이지의 디자인을 담당합니다.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>
+            JavaScript는 웹페이지에 동작을 추가합니다.
+        </p>
+    </div>
+    <div class="clear">
+
+    </div>
+
+</div>
+
+</body>
+</html>

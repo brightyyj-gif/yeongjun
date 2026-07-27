@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+        /* 글씨체 맑은고딕, 사이즈 18 글자색 #333 글자굵기는 400 폰트스타일 노말
+        글자 중앙정렬 밑줄 없음 줄간격 1 자간은 1.5px 배경색 #f9f9f9 
+        border: 2px solid #e0e0e0; 보더라디우스 8px 안여백은 30px 넓이 600px
+        바깥여백은 중앙정렬의 위아래 50px*/
+        .styled-text-box{
+            font-family: "Nanum Gothic", sans-serif;;
+            font-size: 18px;
+            color: #333;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            background-color: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            width: 600px;
+            margin: 50px auto;
+            /* 줄간격 (글자 크기 대비 비율 또는 단위 포함 값) */
+            line-height: 1.8;
+            /* 자간 (글자와 글자 사이 간격) */
+            letter-spacing: 1.5px;
+            /* 밑줄 및 텍스트 장식 (none, underline, line-through 등) */
+            text-decoration: none;
+        }
+        /* 폰트 컬러 #0066cc font-weight 700 이탤릭 언더라인 */
+        .highlight{
+            color: #0066cc;
+            font-weight: 700;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="styled-text-box">
+        <h2>웹 폰트 및 텍스트 스타일링</h2>
+        <p>
+            이 문단은 제시해주신 모든 CSS 속성들이 적용된 예제입니다. 
+            <span class="highlight">이 부분은 강조 스타일</span>이 추가로 적용되어 
+            글자색, 굵기, 기울임, 밑줄이 다르게 나타납니다.
+        </p>
+    </div>
+</body>
+</html>

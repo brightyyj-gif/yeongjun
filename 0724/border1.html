@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 20px;
+        /* border: 5px solid red
+           테두리 : 선 두께 실선 색상 
+        */
+        display: inline-block;
+        margin: 15px;
+        border-width: 5px;
+    }
+    #dox1{ /* id는 앞에 #을 붙여야함 */border-style: solid; /* 실선 */ border-color: red;
+    }
+    #dox2{border-style: dotted; /* 점선*/ border-top-color: red;
+    }
+    #dox3{border-style: dashed; /* 짧은 점선 */
+    }
+    #dox4{border-style: double; /* 이중 */
+    }
+</style>
+</head>
+<body>
+    <div id="dox1">실선 테두리</div>
+    <div id="dox2">점선 테두리</div>
+    <div id="dox3">짧은 점선 테두리</div>
+    <div id="dox4">이중 테두리</div>
+</body>
+</html>

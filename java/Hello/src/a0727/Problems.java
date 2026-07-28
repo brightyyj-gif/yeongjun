@@ -5,7 +5,7 @@ public class Problems {
         int[] a = new int[999];
         for (int i = 1; i < a.length; i++) {
             if (i % 3 == 0 && i % 2 != 0)
-                a[i];
+                
         }
 
         System.out.print(a);

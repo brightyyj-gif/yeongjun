@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/flex.css">
+</head>
+<body>
+    <header>
+        
+        <div class="logo">Flexbox 사이트</div>
+        <nav>
+            <a href="#home">홈</a>
+            <a href="#about">소개</a>
+            <a href="#services">서비스</a>
+            <a href="#portfolio">포트폴리오</a>
+            <a href="#contact">연락처</a>
+        </nav>
+        <div class="user-menu">
+            <div class="user-avatar">👤</div>
+            <span>사용자</span>
+        </div>
+    </header>
+      <section class="hero">
+            <div class="hero-content">
+                <h1>Flexbox로 만든 웹사이트</h1>
+                <p>모든 레이아웃이 Flexbox로 구현되었습니다</p>
+            </div>
+        </section>
+
+        <section class="card-grid">
+            <div class="card">  
+                <div class="card-icon">🎨</div>
+                <h3>디자인</h3>
+                <p>
+                    Flexbox를 사용하여 아름답고 반응형인 레이아웃을 만들었습니다.
+                    모든 요소가 유연하게 배치되어 다양한 화면 크기에 대응합니다.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>성능</h3>
+                <p>
+                    Flexbox는 최신 브라우저에서 최적화되어 있어 
+                    빠르고 부드러운 레이아웃을 제공합니다.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>반응형</h3>
+                <p>
+                    flex-wrap과 gap을 사용하여 완벽한 반응형 디자인을 구현했습니다.
+                    모바일, 태블릿, 데스크톱 모든 기기에서 완벽하게 작동합니다.
+                </p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h4>헤더 레이아웃</h4>
+                <p>justify-content: space-between으로 로고, 메뉴, 사용자 정보를 배치했습니다.</p>
+            </div>
+            <div class="feature">
+                <h4>카드 그리드</h4>
+                <p>flex: 1 1 300px로 반응형 카드 그리드를 만들었습니다.</p>
+            </div>
+            <div class="feature">
+                <h4>스티키 푸터</h4>
+                <p>body에 flex-direction: column을 사용하여 스티키 푸터를 구현했습니다.</p>
+            </div>
+        </section>
+        <footer>
+             <div class="footer-section">
+            <h3>회사 정보</h3>
+            <p>주소: 서울시 강남구</p>
+            <p>전화: 02-1234-5678</p>
+            <p>이메일: info@example.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>빠른 링크</h3>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">서비스</a></li>
+                <li><a href="#">포트폴리오</a></li>
+                <li><a href="#">연락처</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>SNS</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>뉴스레터</h3>
+            <p>최신 소식을 받아보세요</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+                &copy; 2024 Flexbox 사이트. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

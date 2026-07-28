@@ -2,7 +2,7 @@ package a0727;
 
 public class Max1 {
     public static void main(String[] args) {
-        int[] score = {90,85,70,100,95};
+        int[] score = {90,85,70,95,100};
 
         int max = score[0];
         //최고 점수를 찾아서 프린트 하시오

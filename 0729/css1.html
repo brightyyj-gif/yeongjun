@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 태그중에서는 id가 가장 우선순위 !important는 예외 */
+        p{color: blue;}
+        .text{color: red;}
+        #text{color: orange;}
+        /* 부모부터 코딩 한 것이 우선 (복잡하게 쓰는게 우선) */
+        li{color: red;}
+        ul li{color: blue;}
+    </style>
+</head>
+<body>
+    <!-- 우선순위 -->
+    <p>파란색</p>
+    <p class="text">나는 빨간색</p>
+    <p id="text">오렌지</p>
+    <ul>
+        <li>안녕1</li>
+        <li>안녕2</li>
+        <li>안녕3</li>
+    </ul>
+</body>
+</html>

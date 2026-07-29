@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .cont1{
+            width: 500px;
+            border: 1px solid #333;
+            background-color: yellow;
+            /* float하면 높이가 무조건 깨진다. */
+            /* 높이를 직접 입력 height */
+            overflow: hidden;
+            padding: 20px;
+        }
+        .cf::after{
+            content: '';
+            display: block;
+            clear:both;
+        }
+        .box{
+            float: left;
+            /* display: inlineblock; */
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-right: 60px;
+        }
+        .cont2{
+            margin-top: 50px;
+            width: 500px;
+            height: 200px;
+            background-color: yellow;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .cont2 .box{
+            float: none;
+            margin: 0;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarines;
+        }
+        .cont3{
+            margin-top: 50px;
+            width: 500px;
+            height: 200px;
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+        .cont3 .box{
+            float: none;
+            margin: 0;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarines;
+        }
+        .cont4{
+            margin-top: 50px;
+            width: 500px;
+            height: 200px;
+            background-color: yellow;
+            position: relative; /* 기준 */
+        }
+        .cont4 .box{
+            position: absolute;
+            float: none;
+            margin: 0;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .cont4 .box3{
+            right: 50px;
+            top: 50px;
+        }
+        .cont4 .box1{
+            left: 50px;
+            top: 50px;
+        }
+        .cont4 .box2{
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content cont1">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+    </div>
+    <div class="content cont2">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+    </div>
+    <div class="content cont3">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+    </div>
+     <div class="content cont4">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+    </div>
+</body>
+</html>

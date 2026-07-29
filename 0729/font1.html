@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 기본 16px -->
+    <style>
+        body{font-size: 16px;}
+        .f1{
+            font-size: 32px;
+        }
+        .f2{font-size: 2em;}
+        .f3{font-size: 2rem;}
+        .f2 span{font-size: 2em;}/* 부모 32px * 2 = 64 */
+        .f3 span{font-size: 2rem;}/* 루트 16 * 2 = 32 */
+    </style>
+</head>
+<body>
+    <div>
+        <p class="f1">폰트1</p>
+        <p class="f2">폰트2<span>자식폰트</span></p>
+        <p class="f3">폰트3<span>자식폰트</span></p>
+        <p class="f4">폰트4</p>
+    </div>
+</body>
+</html>

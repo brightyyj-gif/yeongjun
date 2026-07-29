@@ -27,7 +27,7 @@ public class MethodEx11 {
     }
   
         
-    }
+    
     private static int getMax(int[] arr1) {
         int max = arr1[0];
         for(int i = 1; i < arr1.length; i++){

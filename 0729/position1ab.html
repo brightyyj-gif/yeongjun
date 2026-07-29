@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{height: 3000px;}
+        .box{
+            width: 150px;
+            height: 150px;
+            position: static;
+            /* 아무포지션이 없는상태 static */
+
+        }
+        .box1{
+            background-color: blueviolet;
+        }
+        .box2{
+            background-color: brown;
+        }
+        .box3{
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+            background-color: chartreuse;
+        }
+        .box4{
+            background-color: royalblue;
+        }
+        /* 
+        absolute
+        1. relative 자식역할
+        2. 부모(화면 전체, relative준 부모)
+        3. 자리값이 없다.
+        4. 겹치는 속성
+        5. left top, rightt bottom */
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

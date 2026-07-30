@@ -1,0 +1,71 @@
+*{margin: 0; padding: 0;}
+h2{
+
+}
+.bigbox{
+    position: relative;
+    width: 1070px;
+    height: 810px;
+    border: 1px solid #fff;
+    margin: 50px auto 0;
+    /* 위 좌우 아래 */
+}
+.box{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    display: none;
+}
+.box img{
+    display: block;
+    width: 100%;
+}
+.box1{
+    display: block;
+    left: 0;
+    top: 0;
+}
+.box2{
+    display: block;
+    left: 270px;
+    top: 0;
+}
+.box3{
+    display: block;
+    left: 540px;
+    top: 0;
+}
+.box4{
+    display: block;
+    left: 810px;
+    top: 0;
+}
+.box5{
+    display: block;
+    left: 0;
+    top: 270px;
+}
+.box6{
+    display: block;
+    left: 540px;
+    top: 270px;
+    width: 530px;
+    height: 270px;
+}
+.box7{
+    display: block;
+    left: 0;
+    top: 540px;
+}
+.box8{
+    display: block;
+    left: 270px;
+    top: 540px;
+    width: 520px;
+    height: 260px;
+}
+.box9{
+    display: block;
+    left: 810px;
+    top: 540px;
+}

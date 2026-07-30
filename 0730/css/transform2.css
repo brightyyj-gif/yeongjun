@@ -1,0 +1,146 @@
+*{margin: 0; padding: 0;}
+.bigbox{
+    width: 1000px;
+    margin: 100px auto 0;
+    /* 마진 위100 좌우 auto 아래 0 */
+    border: 5px solid tan;
+    /* height: 250px; */
+    overflow: hidden;
+    padding: 20px 0;
+}
+.bigbox h2{
+    padding-bottom: 20px;
+    text-align: center;
+}
+.box{
+    width: 200px;
+    height: 150px;
+    border: 2px solid tan;
+    float: left;
+    /* 자식이 float가 되면 부모에 높이가 깨진다 */
+    margin-left: 35px;
+    position: relative;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* 사진간격 없애기 */
+}
+.box1 img{
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+.box1:hover img{
+    transform: rotate(360deg);
+}
+.box2 img{
+    transform: rotate(0deg);
+    transform-origin: left top;
+    transition: all 0.5s;
+}
+.box2:hover img{
+    transform: rotate(360deg);
+}
+.box3{
+    perspective: 150px;
+}
+.box3 img{
+    transform: rotateY(0deg);
+    transition: all 1s;
+}
+.box3:hover img{
+    transform: rotateY(360deg);
+}
+.box4{
+    perspective: 150px;
+    /* 원근감을 느끼게 해준다. */
+}
+.box4 img{
+    transform: rotateY(0deg);
+    transform-origin: left top;
+    transition: all 1s;
+}
+.box4:hover img{
+    transform: rotateY(360deg);
+}
+.abox1{overflow: hidden;}
+
+.abox1 img{
+    transform: scale(1);
+    transition: all 0.5s;
+}
+.abox1:hover img{
+    transform: scale(1.5);
+}
+.abox2{
+    background: url(../images/women2.jpg) no-repeat 50% 50%;
+    background-size: 100%;
+    transition: all 0.5s;
+}
+.abox2:hover{
+    background-size: 130%;
+}
+.abox3::after{
+    content:"";
+    position: absolute;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    top: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); 1번 */
+    /* 반투명 검정색 */
+    /* background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0); 2번 방법 */
+    /* background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0,1);
+    transform-origin: left top; 3번 */
+    transition: all 0.3s;
+}
+.abox3:hover::after{
+    /* background-color: rgba(0, 0, 0, 0); 1번 */
+    /* transform: scale(1); 2번 */
+    /* transform: scale(1,1); 3번 */
+    width: 100%;
+}
+.abox4::before{
+    content: "  ";
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 0%;
+    left: 0;
+    top: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); 1번 */
+    /* 반투명 검정색 */
+    /* background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0); 2번 방법 */
+    /* background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0,1);
+    transform-origin: left top; 3번 */
+    transition: all 0.3s;
+}
+.abox4:hover::before{
+    /* background-color: rgba(0, 0, 0, 0); 1번 */
+    /* transform: scale(1); 2번 */
+    /* transform: scale(1,1); 3번 */
+    height: 100%;
+}
+.txt1{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 20%;
+    left: 0;
+    z-index: 10;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    /* 불투명도 0 */
+    transition: all 0.3s;
+}
+.abox4:hover .txt1{
+    opacity: 1;
+}

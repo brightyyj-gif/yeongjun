@@ -84,3 +84,23 @@ h2{
 .box:hover::before{
     width: 100%;
 }
+.box p{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding-bottom: 48px;
+    text-align: center;
+    background: url(../images/more.png) no-repeat 50% 100%;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    box-sizing: border-box;
+    transition: opacity .3s ease;
+    transform: translate(0, -50%);
+}
+.box:hover p{
+    opacity: 1;
+}

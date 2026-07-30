@@ -21,5 +21,10 @@ public class ProductMain {
 
         product3.printProductInfo();
         System.out.println();
+
+        //영수증
+        product1.printReceipt();
+
+        product1.calcPriceVAT();
     }
 }

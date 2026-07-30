@@ -29,6 +29,8 @@ h2{
     display: block;
     left: 270px;
     top: 0;
+    width: 260px;
+    height: 530px;
 }
 .box3{
     display: block;
@@ -68,4 +70,17 @@ h2{
     display: block;
     left: 810px;
     top: 540px;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    left: auto;
+    top: 0;
+    background-color: rgba(0, 0, 255, 0.5);
+    width: 0;
+    height: 100%;
+    transition: all 0.5s;
+}
+.box:hover::before{
+    width: 100%;
 }

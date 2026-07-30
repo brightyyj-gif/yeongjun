@@ -67,5 +67,19 @@ public class Product {
     private int calcTotalPrice() {
         return price * quantity; //수량 * 단가
     }
-    
+    public void printReceipt() {
+        System.out.println("=== 영수증 ===");
+        printProductInfo();
+
+        System.out.println("부가세" + String.format("%, d", calcVAT()));
+    }
+    private int calcVAT() {
+        return (int)(calcFinalPrice() * 0.1);
+
+    }
+
+    //최종금액 (부가세 포함금액)
+    int calcPriceVAT() {
+        return calcFinalPrice() + calcVAT();
+    }
 }

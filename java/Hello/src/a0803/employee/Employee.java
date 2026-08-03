@@ -63,7 +63,7 @@ public class Employee {
     }
 
     public void printInfo(){
-        System.out.println("%4d %-6s %7d %7d %7d\n", 
+        System.out.printf("%4d %-6s %7d %7d %7d\n", 
             empNo, name, salary, bonus, totalSalary
         );
     }

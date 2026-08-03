@@ -14,6 +14,13 @@ public class Main1 {
     }
 
     private static void printEmployee(Employee[] employees) {
-        
+        System.out.println("===========================================");
+        System.out.println("사번    이름    기본급    보너스    총급여");
+        System.out.println("===========================================");
+        for(int i = 0; i < employees.length; i++){
+            if(employees[i] != null){
+                employees[i].printInfo();
+            }
+        }
     }
 }

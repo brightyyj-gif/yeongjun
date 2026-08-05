@@ -235,3 +235,262 @@ nav:hover{
 .down span.next:hover{
     background-position: -50px -50px;
 }
+.s2{
+    padding: 80px 0;
+    background-color: #f2f2f2;
+}
+.content_top{
+    width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.content_top .utilization{
+    width: 400px;
+    height: 300px;
+    float: left;
+    position: relative;
+    background: url(../images/bg_utilization.png);
+}
+.content_top .utilization p{
+    position: absolute;
+    left: 39px; top: 38px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px; /*줄간격*/
+    letter-spacing: -0.03em;
+}
+.content_top .utilization .btn{
+    position: absolute;
+    bottom: 42px;
+    left: 39px;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 7px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.content_top .history{
+    position: relative;
+    width: 825px;
+    height: 300px;
+    float: left;
+}
+.content_top .history p{
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+}
+.content_top .history .btn{
+    position: absolute;
+    bottom: 42px;
+    left: 50%;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 7px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.content_bottom{
+    padding: 10px 0;
+    width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.content_bottom .whats_News{
+    width: 870px;
+    height: 300px;
+    float: left;
+    background-color: #fff;
+    border-radius: 30px 0 30px 0;
+    position: relative;
+}
+.content_bottom .whats_News .hd{
+    position: absolute;
+    top: 75px;
+    left: 60px;
+}
+.content_bottom .whats_News .hd h2{
+    color: #292929;
+    font-size: 30px;
+    font-weight: bold;
+    background: url(../images/bul_tit.png) 0 0 no-repeat;
+    min-height: 60px;
+    padding: 17px 0 0 25px;
+    margin-bottom: 1px;
+}
+.content_bottom .whats_News .hd p{
+    text-align: center;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: #666;
+}
+.content_bottom .board_list{
+    position: absolute;
+    top: 75px;
+    right: 60px;
+}
+/* .content_bottom .board_list ul li{
+    margin-top: 21px;
+}
+.content_bottom .board_list ul li:nth-child(1){
+    margin-top: 0;
+} */
+.content_bottom .board_list ul li:not(:nth-child(1)){
+    margin-top: 21px;
+}
+.content_bottom .board_list ul li a{
+    display: inline-block;
+    font-size: 16px;
+    color: #292929;
+}
+.content_bottom .board_list ul li a:hover{
+    color: #009223;
+    text-decoration: underline;
+}
+.content_bottom .board_list .more{
+    display: inline-block;
+    padding: 33px 0 8px;
+    color: #999;
+    font-size: 14px;
+}
+.content_bottom .banner_sponsor{
+    width: 270px;
+    height: 300px;
+    float: left;
+    margin-left: 30px;
+    overflow: hidden;
+    border-radius: 0 30px 0 30px;
+    position: relative;
+}
+.s3{
+    padding: 50px;
+    text-align: center;
+
+}
+.quick_menu ul li{
+    display: inline-block;
+    width: 230px;
+    height: 70px;
+    /* border: 1px solid #333; */
+    margin-right: 50px;
+}
+.quick_menu ul li a{
+    display: block;
+    position: relative;
+    padding-left: 90px;
+}
+.quick_menu ul li a .icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid #333; */
+    background: url(../images/icon_quickmenu.png) no-repeat  0 0;
+}
+.quick_menu ul li.qm02 .icon{
+
+    background: url(../images/icon_quickmenu.png) no-repeat  -140px 0;
+}
+.quick_menu ul li.qm03 .icon{
+    background-position: -210px 0;
+
+}
+.quick_menu ul li a strong{
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+.quick_menu ul li a span{
+    display: block;
+    text-align: left;
+    font-size: 13px;
+}
+footer{
+    background-color: #292929;
+    color: #666;
+    padding: 22px 0;
+    position: relative;
+    z-index: 9;
+}
+footer::after{
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #666;
+}
+footer .content_bottom{
+    /* 변경가능 */
+}
+
+footer .footer_util_menu{
+    margin-bottom: 25px;
+}
+
+footer .footer_util_menu ul{
+    overflow: hidden;
+}
+footer .footer_util_menu ul li{
+    float: left;
+    margin-right: 29px;
+}
+footer .footer_util_menu ul li a{
+    color: #666;
+    display: block;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+}
+footer .footer_util_menu ul li a strong{
+    color: #aaa;
+}
+.content_bottom .address{
+}
+.content_bottom .address span:nth-child(1){
+    padding-left: 0;
+}
+.content_bottom .address span{
+    display: inline-block;
+    padding-right: 10px;
+    position: relative;
+}
+.content_bottom .address span::after{
+    content: "";
+    width: 1px;
+    height: 13px;
+    background-color: #666;
+    position: absolute  ;
+    right: 0;
+    top: 11px;
+}
+footer .content_bottom .sns_area{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid #fff; */
+    right:40px;
+    bottom: 40px;
+    text-indent: -9999px; /* 들여쓰기 */
+    /* font-size: 0; */
+
+}
+.content_bottom .sns_area.instagram{
+    right: 105px;
+    background: url(../images/icon_sns_instar.png) 0 0 no-repeat;
+}
+.content_bottom .sns_area.facebook{
+    background: url(../images/icon_sns_facebook.png) 0 0 no-repeat;
+}
+.content_bottom .sns_area:hover{
+    background-position: -50px 0;
+}

@@ -53,6 +53,48 @@
             </div>
         </section>
     </main>
+        <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>회사 정보</h3>
+                    <ul>
+                        <li>주소: 서울시 강남구</li>
+                        <li>전화: 02-1234-5678</li>
+                        <li>이메일: info@example.com</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>빠른 링크</h3>
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">서비스</a></li>
+                        <li><a href="#">연락처</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>SNS</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 반응형 사이트. All rights reserved.</p>
+            </div>
+        </div>
+    
+    <script>
+        function toggleMenu(){
+            //nav 변수에 document.getElementById('nav') 넣어서 저장
+           const nav = document.getElementById('nav')
+           nav.classList.toggle('active');
+        }
+    </script>
+    </footer>
      <section class="content-layout">
             <aside class="sidebar">
                 <h3>사이드바</h3>
@@ -77,12 +119,5 @@
                 </p>
             </div>
         </section>
-    <script>
-        function toggleMenu(){
-            //nav 변수에 document.getElementById('nav') 넣어서 저장
-           const nav = document.getElementById('nav')
-           nav.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>

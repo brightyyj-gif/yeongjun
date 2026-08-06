@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미니 프로젝트</title>
+    <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">반응형 사이트</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="nav">
+                <a href="#home">홈</a>
+                <a href="#about">소개</a>
+                <a href="#services">서비스</a>
+                <a href="#portfolio">포트폴리오</a>
+                <a href="#contact">연락처</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>반응형 웹디자인</h1>
+            <p>모든 기기에서 완벽하게 작동하는 웹사이트</p>
+        </section>
+        <section class="card-grid">
+        </div>
+        <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>모바일 우선</h3>
+                <p>
+                    모바일 우선 설계로 작은 화면부터 시작하여 
+                    점진적으로 큰 화면에 맞춰 확장합니다.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>유동형 레이아웃</h3>
+                <p>
+                    max-width와 퍼센트를 사용하여 
+                    모든 화면 크기에 적응하는 레이아웃입니다.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>미디어 쿼리</h3>
+                <p>
+                    브레이크포인트를 정의하여 
+                    화면 크기에 따라 레이아웃을 전환합니다.
+                </p>
+            </div>
+        </section>
+    </main>
+     <section class="content-layout">
+            <aside class="sidebar">
+                <h3>사이드바</h3>
+                <ul>
+                    <li><a href="#">카테고리 1</a></li>
+                    <li><a href="#">카테고리 2</a></li>
+                    <li><a href="#">카테고리 3</a></li>
+                    <li><a href="#">카테고리 4</a></li>
+                    <li><a href="#">카테고리 5</a></li>
+                </ul>
+            </aside>
+            <div class="main-content">
+                <h2>메인 콘텐츠</h2>
+                <p>
+                    이 레이아웃은 모바일 우선으로 디자인되었습니다.
+                    모바일에서는 사이드바가 메인 콘텐츠 아래에 위치하고,
+                    태블릿 이상에서는 왼쪽에 위치합니다.
+                </p>
+                <p>
+                    화면 크기를 조절하여 레이아웃 변화를 확인해보세요.
+                    모든 요소가 자연스럽게 적응하는 것을 볼 수 있습니다.
+                </p>
+            </div>
+        </section>
+    <script>
+        function toggleMenu(){
+            //nav 변수에 document.getElementById('nav') 넣어서 저장
+           const nav = document.getElementById('nav')
+           nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

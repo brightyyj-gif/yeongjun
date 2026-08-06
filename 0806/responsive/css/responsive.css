@@ -1,0 +1,72 @@
+*{margin: 0; padding: 0; box-sizing:border-box}
+body{background-color: #f5f5f5;}
+.site-header{
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+}
+.site-main{
+    padding: 16px;
+}
+.card-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section-title{
+    margin-bottom: 16px;
+    font-size: 20px;
+    text-align: center;
+}
+/* 카드리스트 - 모바일에서는 1열 세로 */
+.card-list{
+    display: flex;
+    flex-direction: column; /* 위에서 아래로 쌓기 */
+    gap: 16px;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.card-title{
+    margin-top: 8px;
+    font-size: 18px;
+    margin-bottom: 8px;
+    
+}
+.card-content{
+    margin: 0;
+    font-size: 14px;
+    color: #555555;
+}
+/* 1단계 - 화면이 798이상일때(태블릿이상) -> 2열배치 */
+@media (min-width:768px){
+    .card-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card{
+        flex:1 1 calc((100% - 16px) / 2);
+        /* 앞에 1은 -> flex-grow 남은 공간있으면 늘어남 - 같은비율*/
+        /* 뒤에 1은 -> flex shrink 남은 공간있으면 줄어듬 - 같은비율*/
+        /* calc(33.333% - 16px) -> flex-basis */
+        /* 16px 2열로 배치될경우 16 -> 8로 수정 */
+    }
+    
+}
+@media (min-width:1024px){
+    .card-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card{
+        flex:1 1 calc((100% - 32px) / 3);
+        /* 앞에 1은 -> flex-grow 남은 공간있으면 늘어남 - 같은비율*/
+        /* 뒤에 1은 -> flex shrink 남은 공간있으면 줄어듬 - 같은비율*/
+        /* calc(33.333% - 16px) -> flex-basis */
+        /* 16px 2열로 배치될경우 16 -> 8로 수정 */
+    }
+    
+}

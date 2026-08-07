@@ -230,7 +230,7 @@ footer{
 .footer-section a{
     color: #ecf0f1;
     text-decoration: none;
-    trasition: color 0.3s;
+    transition: color 0.3s;
 }
 .footer-section a:hover{
     color: #3498db;
@@ -241,4 +241,13 @@ footer{
     padding-top: 20px;
     border-top: 1px solid #34495e ;
     opacity: 0.8;
+}
+@media (min-width: 768px) {
+    .footer-content{
+    flex-direction: row;
+    justify-content: space-around;
+    }
+}
+.footer-section{
+    flex: 1;
 }

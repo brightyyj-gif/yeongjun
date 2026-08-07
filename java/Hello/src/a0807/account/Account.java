@@ -28,7 +28,7 @@ public class Account {
     }
     @Override
     public String toString() {
-        return ano + owner + balance;
+        return ano + " " +  owner + " " + balance;
     }
     public Account(String ano, String owner, int balance) {
         this.ano = ano;

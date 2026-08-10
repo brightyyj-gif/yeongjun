@@ -32,15 +32,20 @@ public class BankApplication {
                     break;
 
                 case 3:
-                    System.out.println("---------");
-                    System.out.println("예금");
-                    System.out.println("---------");
+                    deposit();
                     
 
                 default:
                     break;
             }
         }
+    }
+
+    private static void deposit() {
+        System.out.println("---------");
+        System.out.println("예금");
+        System.out.println("---------");
+        int money = 0;
     }
 
     private static void accountList() {

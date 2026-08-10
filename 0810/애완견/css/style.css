@@ -1,0 +1,104 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;color:#000;}
+
+#wrapper{
+    width: 900px;
+    margin: 0 auto;
+    /* margin-left: auto; 오른쪽정렬 */
+}
+/* 전체를 900px의 중앙정렬 */
+
+/* .cf::after{
+    content: "";
+    display: block;
+    clear: both;
+} */
+header{
+    background-color: #f46075;
+    height: 200px;
+    /* 자식이 float되면 height, overflow, .cf */
+}
+header h1{
+    float: left;
+    margin-left: 50px;
+    margin-top: 70px;
+    color: #fff;
+}
+header .logo_p{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+nav{
+    height: 60px;
+    background-color: #ccc;
+}
+nav ul li{
+    float: left;
+    width: 200px;
+    /* height: 40px;
+    background-color: aqua; */
+    margin-top: 10px;
+    margin-left: 20px;
+}
+nav ul li a{
+    /* a는 인라인요소라 넓이를 줄려면 block inline-block */
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /* background-color: aqua; */
+}
+nav ul li:hover a{
+    background-color: #f46075;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+}
+.main{
+    /* overflow: hidden; */
+    height: 550px;
+}
+section{
+    width: 650px;
+    height: 550px;
+    background-color: skyblue;
+    float: left;
+}
+section h2{
+    padding: 10px 0;
+    text-align: center;
+}
+aside{
+    width: 250px;
+    height: 550px;
+    background-color: #ffffcc;
+    float: left;
+    text-align: center;
+}
+aside h2{
+    padding: 10px 0;
+}
+aside img{
+    padding-bottom: 10px;
+}
+section article{
+    width: 280px;
+    height: 180px;
+    background-color: #fff;
+    float: left;
+    border: 1px solid #333;
+    margin: 0 0 15px 15px;
+    padding: 10px;
+    text-align: justify;
+    /* 양쪽정렬 */
+}
+footer{
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+}

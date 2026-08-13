@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="gnb">이거에요</div>
+        <script>
+        //number
+        var num1 = 10;
+        var num2 = 10.2;
+        var num3 = 1e+2; // 1X 10제곱 100과 같음
+        console.log(num1 + "," + num2 + "," + num3);
+        
+
+        //String
+        var str1 = "문자";
+        var str2 = "문자는 '문자'";
+        var str3 = '문자는 "문자"';
+        var str4 = "You \"are\" too smart" //이스케이프 문자 - 문자열안에서 특별한 기능
+        var str5 = "안녕하세여\n반갑습니다"
+        var str6 = "안녕하세여<br>반갑습니다"
+        console.log(str5);
+
+        console.log(str1 + "," + str2 + "," + str3 + "," + str4);
+        document.write(str6);
+
+        //boolean
+        var com1 = (5 > 4);
+        var com2 = (5 < 4);
+        console.log(com1 + "," + com2);
+
+        //undefined
+        var storage; //초기값을 반드시 할당
+        console.log(Storage);
+
+
+        //null
+        var gnb = document.getElementById("gnb");
+        console.log(gnb);
+
+        //typeof
+        var type1 = 10;
+        var type2 = "문자";
+        var type3 = true;
+        // 데이터형을 알려줌
+        console.log(typeof type1 + "," + typeof type2 + "," + typeof type3);
+
+    </script>
+
+</body>
+</html>

@@ -60,17 +60,15 @@ public class StudentCrudApp {
         System.out.println("\n--- [학생 정보 삭제] ---");
         System.out.print("학번 입력: ");
         String id = scanner.nextLine();
-        boolean removed = false;
-
-        for(Student s : students){
-            if(s.getId().equals(id)){
-                removed = true;
-                students.remove(s);
-                break;
-            } else {
-                removed = false;
-            }
-        }
+        // boolean removed = false;
+        // for (int i = 0; i < students.size(); i++) {
+        //     if (students.get(i).getId().equals(id)) {
+        //     students.remove(i);
+        //     removed = true;
+        //     break;
+        //     }
+        // }
+        boolean removed = students.removeIf(s -> s.getId().equals(id));
         if(removed){
             saveToFile();
             System.out.println("학생 정보가 성공적으로 삭제");

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["사과", "바나나", "오렌지"];
+        console.log(fruits);
+        console.log(fruits[0]); // 인덱스로 접근
+        console.log(fruits[1]); 
+        console.log(fruits[2]);
+
+        console.log(fruits.length);
+        fruits[1] = "포도";
+        console.log(fruits);
+
+        // 마지막에 추가 push
+        fruits.push("딸기");
+        console.log(fruits);
+
+        // 마지막 삭제 pop
+        let item = fruits.pop();
+        console.log(item);
+        console.log(fruits);
+
+        
+        
+    </script>
+</body>
+</html>

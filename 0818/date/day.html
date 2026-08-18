@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var day = today.getDay();
+        var yoil;
+        switch(day){
+            case 0:
+                yoil = "일요일"
+                break;
+            case 1:
+                yoil = "월요일"
+                break;
+            case 2:
+                yoil = "화요일"
+                break; 
+            case 3:
+                yoil = "수요일"
+                break;
+            case 4:
+                yoil = "목요일"
+                break;
+            case 5:
+                yoil = "금요일"
+                break;
+            case 6:
+                yoil = "토요일"
+                break;
+            default:
+                yoil = "에러"
+        }
+        // var yoil1;
+        // if(day == 0){
+        //     yoil1 = "일요일"
+        // } else if(day == 1){
+        //     yoil1 = "월요일"
+        // } else if(day == 2){
+        //     yoil1 = "화요일" 
+        // } else if(day == 3){
+        //     yoil1 = "수요일"
+        // } else if(day == 4){
+        //     yoil1 = "목요일"
+        // } else if(day == 5){
+        //     yoil1 = "금요일"
+        // } else if(day == 6){
+        //     yoil1 = "토요일"
+        // } else{
+        //     yoil1 = "에러";
+        // }
+
+
+        //배열사용
+        let yoil2 = ["일","월","화","수","목","금","토"];
+        let yo = yoil2[day];
+        alert(yo);
+        document.write(year + "년 " + month + "월 " + date + "일 " +yoil);
+    </script>
+</body>
+</html>

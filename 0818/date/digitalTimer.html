@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    var today = new Date();
+    var year = today.getFullYear(); //today 년도만 가져와서 year 대입
+    var month = today.getMonth()+1;
+    var date = today.getDate();
+    var day = today.getDay();
+    // console.log(year, month, date, day);
+    //배열사용
+        let yoil2 = ["일","월","화","수","목","금","토"];
+        let yo = yoil2[day];
+        // alert(yo);
+        document.write(year + "년 " + month + "월 " + date + "일 " +yoil);
+</script>
+</head>
+<body>
+    
+</body>
+</html>

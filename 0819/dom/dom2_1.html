@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="title">안녕하세요</h1>
+
+    <button id="btn1">변경</button>
+
+    <script>
+        //버튼 클릭시 .title에 있는 안녕하세요를 -> 반갑습니다. 로 변경
+        let title = document.getElementById('title');
+        let btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click',function(){
+            title.innerText = "반갑습니다.";    
+        });
+    </script>
+</body>
+</html>

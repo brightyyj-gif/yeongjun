@@ -54,4 +54,32 @@ public class User {
     public void addTotalPaid(int amount) {
         totalPaid += amount; //금액누적
     }
+    public void showReservations() {
+         System.out.println("\n예약 내역");
+         for (int i = 0; i < reservedMovies.size(); i++) {
+                System.out.println("예매번호: " + reservationNumbers.get(i) +
+                                   " | 영화: " + reservedMovies.get(i) +
+                                   " | 좌석: " + reservedSeats.get(i));
+            }
+    }
+    public void clearReservations() {
+        //예약 내역 초기화
+        reservedMovies.clear(); //list안에 있는 내용전부 삭제
+        //예매한 영화 제목 초기화
+        reservedSeats.clear();
+        //예매한 좌석 번호 초기화
+        reservationNumbers.clear();
+        //예매번호 초기화
+    }
+    public void removeReservationBymovie(String title) {
+        for(int i = reservedMovies.size() - 1; i >= 0; i--){
+            if(reservedMovies.get(i).equals(title)){
+                reservedMovies.remove(i);
+                reservedSeats.remove(i);
+                reservationNumbers.remove(i);
+            }
+        }
+
+        // reservedMovie.removeIf(movie -> movie.equals(title));
+    }
 }

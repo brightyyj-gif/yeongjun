@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+        <li>포도</li>
+    </ul>
+    
+    <script>
+        // li 태그들을 모두 가져온다.
+        let items = document.querySelectorAll("li");
+
+        // 하나씩 이벤트 등록 - 일반 for문
+        // for(let i = 0; i < items.length; i++){
+        //     items[i].addEventListener("click", function(){
+        //         alert(items[i].innerHTML);
+        //     });
+        // }
+
+        items.forEach((item)=>{
+            item.addEventListener("click",()=>{
+                alert(item.innerHTML);
+            });
+        })
+    </script>
+</body>
+</html>

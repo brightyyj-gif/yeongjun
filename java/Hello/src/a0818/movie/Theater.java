@@ -11,7 +11,7 @@ public class Theater {
         public Theater(int seatCount) {
             seats = new ArrayList<>();
             for(int i = 0; i < seatCount; i++){
-                seats.add((i+i) + ""); //문자로 저장("")
+                seats.add((i+1) + ""); //문자로 저장("")
                 //초기 좌석 번호 저장
             }
         }
@@ -46,6 +46,10 @@ public class Theater {
             }
             return count;
             //"X"가 아닌 좌석의 개수를 세어서 반환
+        }
+        public void cancelSeat(int seatNumber) {
+            if(seatNumber > 0 && seatNumber <= seats.size() && seats.get(seatNumber -1).equals("X"));
+            seats.set(seatNumber-1, String.valueOf(seatNumber)); //seatNumber 를 문자로 변경저장
         }
     }
 

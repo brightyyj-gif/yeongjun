@@ -1,3 +1,4 @@
+
 package a0818.movie;
 
 import java.util.Scanner;
@@ -62,12 +63,12 @@ public class MovieReservationMain {
                     System.out.println("영화 목록이 갱신되었습니다.");
                     break;
                 case "3":
-                   // reservationManager.showMovies();
+                   reservationManager.showMovies();
 
-                   // reservationManager.modifyMovieInfo(sc);    
+                   reservationManager.modifyMovieInfo(sc);    
                     break;
                 case "4":
-                    // reservationManager.setDiscountRate(sc);
+                    reservationManager.setDiscountRate(sc);
                      break;
                 case "0":
                     return;        

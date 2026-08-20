@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- addEventListner() -->
+
+<button id="btn">클릭</button>
+<button id="btn1">클릭</button>
+<button id="btn2">버튼2</button>
+<script>
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click",function(event){
+        console.log(event);
+    });
+
+    const btn1 = document.getElementById("btn1");
+
+    btn1.addEventListener("click",function(e){
+        // console.log(e.target);
+        // console.log(e.target.innerHTML);
+        // console.log(this); this는 화살표함수에서 쓰지 않는다.
+    });
+
+    const btn2 = document.getElementById("btn2");
+
+    btn2.addEventListener("click",(e) => {
+        console.log(e.target);
+        console.log(e.currentTarget);
+    });
+
+</script>
+
+</body>
+</html>

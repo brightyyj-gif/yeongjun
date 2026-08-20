@@ -11,7 +11,7 @@ public class User {
     private ArrayList<Integer> reservedSeats;
     //예매한 좌석 번호 저장
     private static int reservationCounter = 1;
-    //모드ㅜㄴ 사용자가 공유하느 예매번호
+    //모든 사용자가 공유하느 예매번호
     private int totalPaid = 0;
     //누적 결제 금액
     public User(String name) {

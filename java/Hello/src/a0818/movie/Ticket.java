@@ -1,4 +1,5 @@
-package a0818.movie;
+pa
+ckage a0818.movie;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -13,7 +13,10 @@ import java.util.Scanner;
  */
 public class MovieReservationMain {
     private static final String ADMIN_PASSWORD = "admin123";
-    private static final String DATA_DIR = "d:\\movieTicket";
+    private static final String DATA_DIR = "C
+    
+    
+    :\\movieTicket";
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

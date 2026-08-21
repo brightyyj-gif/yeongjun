@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://google.com" id="myLink" target="_blank">구글</a>
+</body>
+</html>
+<script>
+    // attribute(속성)
+    // getattribute(속성값을 읽어옴)
+    // setAttribute 속성변경(지정)
+    const link = document.getElementById("myLink");
+    console.log(link.getAttribute("href")); // 출력: https://google.com
+    console.log(link.getAttribute("target")); // 출력: _blank
+
+    // href 속성을 네이트로 변경
+    link.setAttribute("href","https://nate.com");
+    // target 속성을 self변경
+    link.setAttribute("target", "_self");
+    console.log(link.getAttribute("href"));
+    console.log(link.getAttribute("target"));
+</script>

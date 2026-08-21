@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">과일 목록</h1>
+
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+    </ul>
+</body>
+</html>
+<script>
+    // title을 선택하는 두가지 방법
+    let title = document.getElementById("title"); // id라고 명시가 돼있으므로 #생략
+    // let title = document.querySelector("#title"); 
+    console.log("id선택자1", title.textContent);
+    // console.log("id선택자2", title.innerHTML);
+    // console.log("id선택자2", title.innerText);
+
+    // 2. 클래스 .item 복수개 이므로 (HtmlColletion -> for문)
+    const itemByClass = document.getElementsByClassName("item");
+    console.log("클래스로 선택");
+    for(let i = 0; i < itemByClass.length; i++){
+        console.log(" -", itemByClass[i].textContent);
+    }
+
+    // 3. 태그 li 복수개 이므로 (HtmlColletion -> for문)
+    const itemByTag = document.getElementsByTagName("li");
+    console.log("태그로 선택");
+    for(let i = 0; i < itemByTag.length; i++){
+        console.log(" -", itemByTag[i].textContent);
+    }
+
+    // 4. querySelector 클래스나 태그선택시 첫번째 선택(4개중 첫번째)
+    const firstItem = document.querySelector(".item");
+    console.log("querySelector (첫번째):", firstItem.textContent);
+
+    // 5. querySelectorAll 클래스나 태그선택시 첫번째 선택(4개중 첫번째)
+    const itemAll = document.querySelectorAll(".item");
+    console.log("querySelector (첫번째):", firstItem.textContent);
+    itemAll.forEach(function(el, index){ //el = item 한개, index인덱스 번호
+        console.log(index+1 + ":", el.textContent);
+    });
+    console.log("querySelectorAll 선택2");
+    itemAll.forEach(el => console.log(el.textContent));
+</script>

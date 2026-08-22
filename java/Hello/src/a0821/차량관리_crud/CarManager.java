@@ -39,17 +39,15 @@ public class CarManager {
                     printAll();
                     break; 
                  case "3":
-                    updateEmployee();// 사원수정하기
+                    updateCar();// 사원수정하기
                     break;
-                //  case "4":
-                //     deleteEmployee();// 사원삭제
-                //     break; 
-                //  case "5":
-                //     searchEmployee();
-                //     break;
-                //  case "6":
-                //     searchByDept();
-                //     break;    
+                 case "4":
+                    deleteCar();// 사원삭제
+                    break; 
+                 case "5":
+                    searchCar();
+                    break;
+
                 case "0":
                     System.out.println("프로그램 종료합니다.");
                     return;
@@ -61,15 +59,62 @@ public class CarManager {
 
     }
 
-    private void updateEmployee() {
+
+    private void searchCar() {
+        System.out.print("검색할 차량번호: ");
+        String carNumber = sc.nextLine();
+        Car c = findByNumber(carNumber);
+
+        if(c == null){
+            System.out.println("해당 차량번호가 없습니다.");
+        }else {
+            System.out.println(c);
+        }
+    }
+
+    private void deleteCar() {
+        System.out.print("삭제할 차량번호");
+        String carNumber = sc.nextLine();
+        Car c = findByNumber(carNumber);
+        if(c == null){
+        System.out.println("해당 차량번호가 없습니다.");
+        return;
+        }
+        cars.remove(c);
+        System.out.println("삭제되었습니다");   
+    }
+    
+
+    private void updateCar() {
         System.out.print("수정할 차량번호: ");
         String carNumber = sc.nextLine();
         Car c = findByNumber(carNumber);
 
-        if(carNumber != null){
-            System.out.println("새 차종");
-
+        if(c == null){
+            System.out.println("해당 차량번호가 없습니다.");
+            return;
         }
+        System.out.print("새 차종(엔터=유지) : ");
+        String model = sc.nextLine();
+        if(!model.isEmpty()){
+            c.setModel(model);
+        }
+        System.out.print("새 색상(엔터=유지) : ");
+        String color = sc.nextLine();
+        if(!color.isEmpty()) {
+            c.setColor(color);
+        }
+        System.out.println("새 연식(엔터=유지) : ");
+        String year = sc.nextLine();
+        if(!year.isEmpty()) {
+            c.setYear(Integer.parseInt(year));
+        }
+        System.out.println("새 가격(엔터=유지) : ");
+        String price = sc.nextLine();
+        if(!price.isEmpty()) {
+            c.setPrice(Integer.parseInt(price));
+        }
+        System.out.println("수정되었습니다");
     }
 
     // case 2

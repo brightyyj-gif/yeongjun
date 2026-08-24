@@ -39,10 +39,10 @@ public class CarManager {
                     printAll();
                     break; 
                  case "3":
-                    updateCar();// 사원수정하기
+                    updateCar();
                     break;
                  case "4":
-                    deleteCar();// 사원삭제
+                    deleteCar();
                     break; 
                  case "5":
                     searchCar();

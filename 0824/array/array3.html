@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let greenArr = ["교대", "방배", "강남"];
+        let yellowArr = ["미금","정자","수서"];
+        greenArr.splice(2,1,"서초","역삼"); // 인덱스 2번에서 1개 삭제후 뒤에 붙임
+        document.write(greenArr+"<br>");
+
+        let data1 = yellowArr.pop(); // 수서 - yellowArr 마지막 데이터를 오려서 data1에 저장
+        let data2 = yellowArr.shift(); // 미금 - yellowArr 맨앞에 데이터를 오려서 data2에 저장
+
+        document.write(data1+"<br>");
+        document.write(data2+"<br>");
+        document.write(yellowArr+"<br>");
+
+        yellowArr.push(data2);
+        // data2의 내용을 yellowArr 마지막에 밀어넣기
+        document.write(yellowArr+"<br>");
+
+        yellowArr.unshift(data1);
+        // data1의 내용을 맨앞에 yellowArr 밀어넣기
+        document.write(yellowArr+"<br>");
+    </script>
+</body>
+</html>

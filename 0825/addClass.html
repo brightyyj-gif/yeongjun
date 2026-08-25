@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass</title>
+     <script src = "js/jquery-4.0.0.js"></script>
+<style>
+.highlight{
+      background-color: yellow;
+}
+.bold{font-weight: bold;}
+
+</style>
+
+</head>
+<body>
+    <p id="myText">이 문장을 클릭해 보세요.</p>
+
+    <script>
+        // $('#myText').click(function(){
+        //     if($(this).hasClass('highlight')){ //hightlight 클래스가 있으면
+        //          $(this).removeClass('highlight');
+        //         $(this).removeClass('bold');
+        //     }else{
+        //         $(this).addClass('highlight');
+        //         $(this).addClass('bold');
+        //     }
+
+        // });
+        $('#myText').on('click',function(){
+            $(this).toggleClass('highlight');
+            $(this).toggleClass('bold');
+
+        });
+
+
+    </script>
+<script>
+    // const myText = document.getElementById('myText');
+
+    // myText.addEventListener('click', function() {
+    //     // highlight 클래스를 가지고 있는지 확인 (contains 사용)
+    //     if (this.classList.contains('highlight')) {
+    //         // 있으면 두 클래스 모두 제거
+    //         this.classList.remove('highlight');
+    //         this.classList.remove('bold');
+    //     } else { 
+    //         // 없으면 두 클래스 모두 추가
+    //         this.classList.add('highlight');
+    //         this.classList.add('bold');
+    //     }
+
+
+    // });
+</script>
+<script>
+    // const myText = document.getElementById('myText');
+
+    // myText.addEventListener('click', function() {
+    //     // classList.toggle을 사용해 클래스가 없으면 추가, 있으면 삭제
+    //     this.classList.toggle('highlight');
+    //     this.classList.toggle('bold');
+    // });
+</script>
+</body>
+</html>

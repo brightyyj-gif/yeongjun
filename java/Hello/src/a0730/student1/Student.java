@@ -28,6 +28,10 @@ public class Student {
 
 
 
+    public Student(String string, int i, int j) {
+        //TODO Auto-generated constructor stub
+    }
+
     //정보 출력 메서드
     public void displayInfo() {
         System.out.println("학생 이름 : " + name);

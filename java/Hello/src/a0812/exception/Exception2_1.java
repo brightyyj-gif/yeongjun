@@ -12,7 +12,7 @@ public class Exception2_1 {
     public static void main(String[] args) {
         try{
             int num = 10 / 0;
-        }catch(Exception e){ //e 에는 오류정보가 있습니다.
+        }catch(ArithmeticException e){ //e 에는 오류정보가 있습니다.
             System.out.println(e);    //java.lang.ArithmeticException: / by zero
             System.out.println(e.getMessage()); // by zero
             e.printStackTrace();//java.lang.ArithmeticException: / by zero

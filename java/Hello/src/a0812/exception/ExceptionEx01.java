@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class ExceptionEx01 {
     public static void main(String[] args) {
-        
+        //여러종류 예외처리
         Scanner sc = new Scanner(System.in);
          try {
             System.out.print("나이 입력 : ");
 
             int age = Integer.parseInt(sc.nextLine());
 
-            if(age < 0){
+            if(age < 0){ // throw 개발자가 직접 예외를 발생시킨다
                 throw new Exception("나이는 음수가 될 수 없습니다."); //throw - 예외를 직접 발생시켜라
             }
 

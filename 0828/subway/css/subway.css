@@ -57,6 +57,8 @@ nav:hover{
 }
 .main_wrapper{
     position: relative;
+    min-width: 1920;
+    margin: 0 auto;
     height: 490px;
 }
 .main_wrapper ul{

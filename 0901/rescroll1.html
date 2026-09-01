@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/main.js"></script>
+
+
+<style>
+*{margin:0;padding:0}
+ul{list-style: none;}
+a{text-decoration: none;color: #333;}
+nav{
+    width:100%;
+    height: 50px;
+    background-color: rgba(255,255,255,0.5);
+    position: absolute;
+    top:50px;
+    z-index: 10;
+}
+nav.fixed{
+    background-color: rgba(255,255,255,1);
+    position: fixed;
+    top:0;   
+}
+
+nav ul{
+    width: 1000px;
+    margin: 0 auto;/*넓이가 있는 블럭요소 좌 우 auto*/
+    display: flex;
+}
+nav ul li a{
+    display: block;
+    width: 200px;
+    height:50px;/*높이 50*/
+    line-height: 50px;/* 높이와 줄간격을 같이 하면 위아래 중앙정렬*/
+    text-align: center;/*좌우의 중앙정렬*/
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #333;
+}
+nav ul li.on a{
+    color:orange;
+}
+
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+#section1{
+    background: url(img/b1.jpg) 50% 50% / cover;
+}
+#section2{
+    background: url(img/b2.jpg) 50% 50% / cover;
+}
+#section3{
+    background: url(img/b3.jpg) 50% 50% / cover;
+}
+#section4{
+    background: url(img/b4.jpg) 50% 50% / cover;
+}
+#section5{
+    background: url(img/b5.jpg) 50% 50% / cover;
+}
+.s_Top{ 
+    /* h1 블럭요소라도 position : absolute, fixed 를 주면 인라인요소 취급 */
+    position:fixed;
+    right:50px;
+    bottom: 50px;
+    z-index: 11;
+    background-color: #fff;
+}
+#float_div{
+    width: 70px;
+    height:250px;
+    background-color: dimgray;
+    padding-top: 10px;
+    /* position: fixed; */
+    position: absolute;
+    right:50px;
+    top:250px;
+}
+#float_div ul li{
+    width: 25px;
+    height: 25px;
+    border-radius: 13px;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#float_div ul li.on{
+    background-color: orange;
+}
+ #popup{
+        width: 301px;
+        height: 351px;
+        position: absolute;
+        top: 210px;
+        left: 50px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 20;
+    }
+
+  #notice_wrap{
+        width: 301px;
+        position: absolute;
+        top: 210px;
+        left: 400px;
+        box-shadow: 0 0  8px #000;
+        font-size: 12px;
+        z-index: 20;
+    }
+    #notice_wrap img{float: left;}
+    .closeWrap{
+        background-color: #000;
+        color: #fff;
+        text-align: right;
+        padding: 5px 10px;
+    }
+    .closeWrap button{
+        margin-left: 20px; cursor: pointer;
+    }
+
+
+
+
+</style>
+
+</head>
+<body>
+    <h1 class="s_Top">0000</h1>
+    <nav id="nav">
+        <ul>
+            <li class="on"><a href="#">MainMenu1</a></li>
+            <li><a href="#">MainMenu2</a></li>
+            <li><a href="#">MainMenu3</a></li>
+            <li><a href="#">MainMenu4</a></li>
+            <li><a href="#">MainMenu5</a></li>
+        </ul>
+    </nav>
+    <div id="wrap">
+        <section id="section1">메인1</section>
+        <section id="section2">메인2</section>
+        <section id="section3">메인3</section>
+        <section id="section4">메인4</section>
+        <section id="section5">메인5</section>
+    </div>
+    <div id="float_div">
+        <ul>
+            <li class="on"><span id="btn1"></span></li>
+            <li><span id="btn2"></span></li>
+            <li><span id="btn3"></span></li>
+            <li><span id="btn4"></span></li>
+            <li><span id="btn5"></span></li>
+        </ul>
+    </div>
+    <!-- 이미지맵 그림한장에 여러개 링크를 만드는것 - 원래용도 -->
+    <div id="popup">
+        <img src="images/popup.jpg" alt="" usemap="#pop">
+        <map name="pop" id="pop">
+            <area shape="rect" coords="253,330,293,344" href="#" alt="창닫기">
+            <area shape="rect" coords="93,329,217,344" href="#" alt="오늘하루 열지않음">
+        </map>
+    </div>
+    <div id="notice_wrap">
+        <img src="images/popup1.jpg" alt="공지">
+        <p class="closeWrap">
+            <input type="checkbox" name="expiresChk" id="expiresChk">
+            <label for="expiresChk">3일 동안 이 창 열지않기</label>
+            <button class="closeBtn">닫기</button>
+        </p>
+    </div>
+</body>
+</html>

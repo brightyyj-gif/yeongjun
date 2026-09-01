@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
     <style>
         *{margin: 0;padding: 0;}
         header{
@@ -40,8 +43,37 @@
             </div>
         </div>
     </div>
+
+    <!-- 이전 버튼 -->
+        <a href="#" class="prev">
+            <img src="images/prev.png" alt="이전">
+        </a>
+
+        <!-- 다음 버튼 -->
+        <a href="#" class="next">
+            <img src="images/next.png" alt="다음">
+        </a>
+
+    </div>
+
 </body>
 </html>
 <script>
+    $(document).ready(function() {
 
-</script>
+      $('.slider').bxSlider({
+        mode: 'horizontal',
+        auto: true,
+        pause: 3000,
+        speed: 500,
+
+        // 직접 만든 버튼 사용
+        prevSelector: '.prev',
+        nextSelector: '.next',
+
+        // 기본 버튼 숨김
+        pager: false
+      });
+
+    });
+  </script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<style>
+     *{margin: 0; padding: 0;}
+    .box{width: 150px;height: 150px;}
+    .box1{background-color: aqua; position: absolute;top: 300px;left:-150px;} /*왼쪽에 숨기기*/
+    .box2{background-color: blueviolet; position: absolute;top: 1200px; left: -150px;}
+    .box3{background-color: brown; position: absolute;top: 1800px; right:-200px;}/*오른쪽에 숨기기*/
+    .box4{background-color: coral; position: absolute;top: 2800px; right:-200px;
+    transition: right 0.3s;}
+    .box4.on{right: 500px;}  
+   .sTop{position: fixed;}
+</style>
+
+</head>
+<body>
+    <h1 class="sTop">0000</h1>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>
+<script>
+    //  let abox = $('.box1').offset().top; //box1가 페이지 위에서 부터 몇 px인지
+    // let bbox = $('.box2').offset().top;
+    // let cbox = $('.box3').offset().left;//box3가 페이지 왼쪽 부터 몇 px인지
+    // let dbox = $('.box4').offset().top;
+    // console.log(abox,bbox,cbox,dbox);
+    $(window).scroll(function(){//화면 스크롤시(휠조작 , 오른쪽 바를 밑으로 내릴때)
+        var sct = $(window).scrollTop();//현재 화면이 페이지 위에서부터 몇 px 내려왔는지
+        $('.sTop').text(sct); //현재 스크롤값을 .sTop에 대입
+
+        if(sct >=10){
+            $('.box1').stop().animate({left : 50 + "%"},800);
+        }
+        if(sct >=500){
+            $(".box2").stop().animate({left:50+"%"},800);
+        }   
+        if(sct >=1200){
+            $(".box3").stop().animate({right:50+"%"},800);
+        } 
+        if(sct <=1500){
+            $(".box4").removeClass('on');
+        }   
+
+        if(sct >=2000){
+            $(".box4").addClass('on');
+        }   
+
+    });
+</script>

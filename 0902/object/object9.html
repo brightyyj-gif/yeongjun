@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let user = {
+    name: '홍길동',
+    age: 25,
+    city: '서울'
+};
+
+let entries = Object.entries(user);
+console.log(entries);
+// [['name', '홍길동'], ['age', 25], ['city', '서울']]
+
+entries.forEach(([key, value]) => {
+    console.log(`${key}: ${value}`);
+});
+    </script>
+</body>
+</html>

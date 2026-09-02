@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let user1 = {
+        name: '홍길동',
+        age: 25,
+        address:{
+            city:'서울'
+        }
+    };
+    // 얕은 복사
+let user2 = {...user1}; // user1의 속성을 펼져서 새 객체{}안에넣습니다.
+
+user2.address.city='부산';
+
+console.log(use1.address.city);
+// user2.name = '김철수';
+// console.log(user1.name); '철수'
+
+// 깊은복사
+let user3 = JSON.parse(JSON.stringify(user1));
+// 1. JSON.stringify(user1) -> user1객체를 JSON 문자열로 변환
+user3.address.city='인천';
+
+console.log(user1.address.city);
+console.log(user3.address.city);
+
+    </script>
+</body>
+</html>

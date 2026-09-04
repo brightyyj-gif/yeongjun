@@ -3,7 +3,7 @@ package a0821.차량관리_crud;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import a0805.array.Array;
+
 
 public class CarManager {
     private ArrayList<Car> cars = new ArrayList<>();

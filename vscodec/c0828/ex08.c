@@ -2,6 +2,7 @@
 
 int main() {
     int a = 10, b = 3;
+ 
     printf("a > b: %d\n", a > b);
     printf("a < b: %d\n", a < b);
     printf("a == b: %d\n", a == b);
@@ -9,3 +10,4 @@ int main() {
 
     return 0;
 }
+

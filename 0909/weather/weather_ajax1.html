@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-ajax</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<style>
+    .weather{
+        width: 300px;
+        height: 150px;
+        text-align: center;
+        background-color: cornflowerblue;
+        color: #fff;
+    }
+    .weather > div{
+        float: left;
+        height: 75px;
+        line-height: 75px;
+        width: 50%;
+    }
+    .weather > div.currIcon, .weather > div.currTemp{
+        font-size: 50px;
+    }
+    .weather > div.city{
+        width: 100%;
+        font-size: 23px;
+    }
+
+</style>
+<script>
+    $(function(){
+         let weatherIcon = {
+            '01' : 'fas fa-sun',
+            '02' : 'fas fa-cloud-sun',
+            '03' : 'fas fa-cloud',
+            '04' : 'fas fa-cloud-meatball',
+            '09' : 'fas fa-cloud-sun-rain',
+            '10' : 'fas fa-cloud-showers-heavy',
+            '11' : 'fas fa-poo-storm',
+            '13' : 'fas fa-snowflake',
+            '50' : 'fas fa-smog'
+        }
+
+var apiURI = 'https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=6e60a201e88946743052b97bbb9228a3&units=metric';
+ 
+$.ajax({
+    url:  apiURI,        // 요청할 URL
+    type: "GET",            // 전송 방식 (GET 또는 POST)
+    dataType: "json",       // 응답받을 데이터 타입
+    async:false,
+    success: function(resp) {
+        console.log("현재 온도"+resp.main.temp)
+        console.log("현재 tmq도"+resp.main.humidity)
+        console.log("상세 날씨"+resp.weather[0].description)
+        console.log("날씨 아이콘"+resp.weather[0].icon)
+        console.log("바람 속도"+resp.wind.speed)
+        console.log("현재 국가"+resp.sys.country)
+        console.log("도시명"+resp.name)
+        console.log("구름"+resp.clouds.all)
+    },
+    error: function(xhr, status, error) {
+        // 통신 실패 시 실행할 코드
+        console.error(error);
+    }
+});
+    });
+</script>
+</head>
+<body>
+    <div class="weather">
+        <div class="currIcon"></div>
+        <div class="currTemp"></div>
+        <div class="city">도시 : </div>
+    </div>
+</body>
+</html>

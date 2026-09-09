@@ -573,3 +573,26 @@ nav ul:hover + .shadow{
     height: 22px;
     cursor: pointer;
 }
+.footer{
+    background-color: #262626;
+}
+.footer_util_menu{
+    width: 100%;
+    height: 61px;
+}
+.footer_util_menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+}
+.footer_util_menu li {
+    padding: 0 20px;
+    
+}
+.footer_util_menu li a{
+    font-size: 13px;
+    color: #ccc;
+}

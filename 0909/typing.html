@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+    <h1 id="text">
+        타이핑 효과 시험 이렇게 쳐보세요 타다닥타닥!
+    </h1>
+</body>
+</html>
+<script>
+    let count = 0;
+    let text1 = $('#text');
+    let msg; // 내용
+    let comp; // 글자길이
+    let kkk;
+    function main() {
+        msg = text1.text(); // 글자의 내용을 msg에 저장
+        // alert(msg);
+        comp = msg.length; // 글자의 갯수
+        // alert(comp);
+        tatata();
+    }
+    main();
+    
+    function tatata(){
+        if(count <= comp) { // comp = 43
+            kkk = msg.substring(0,count);
+            // index 0 count에 지정한 숫자 직전까지 글자를 잘라서 kkk대입
+            text1.text(kkk);
+            count++;
+            setTimeout(tatata, 100); // 재귀함수(자기자신을) 호출0.1초당
+        }else{
+            count = 0;
+            main();
+        }
+    }
+</script>

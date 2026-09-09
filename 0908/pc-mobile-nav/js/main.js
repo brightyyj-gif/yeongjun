@@ -71,6 +71,13 @@ $slider.slick({
     arrows: false,
     dots: true,
     pauseOnHover: true,
+    responsive: [{
+        breakpoint:768,
+        settings:{
+            fade:false, 
+            speed:400,
+        }
+    }]
 });
 
 

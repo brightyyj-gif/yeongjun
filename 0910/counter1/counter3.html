@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function(){
+            // id num에 있는 내용을 읽어와서 number 대입
+            var number = $("#num").attr('data-num');
+            $({percent:0}).animate({percent:number},{
+                duration:3000,
+                progress:function(){
+                    var now = this.percent;
+                    $('#num').text(Math.ceil(now)); // 소수점이하는 올림
+                }
+            });
+        });
+        // {percent:0} : 초기값이 0 인 객체 생성
+        // {percent:111} : 최종값이 111 인 객체 생성
+        // duration:3000 애니메이션 지속시간
+        // progress 함수는 애니메이션 진행중에 호출
+    </script>
+</head>
+<body>
+    <h1 id="num" data-num="300">000</h1>
+</body>
+</html>

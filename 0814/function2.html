@@ -7,14 +7,15 @@
 </head>
 <body>
     <script>
-        function line(){
-        for(var i = 1; i <= 20; i++){
-            document.write("*");
+        function line(str){    //str 매개변수
+        for(var i =1; i<=20; i++){
+            document.write(str);
         }
         document.write("end<br>");
-    }
-    line();
-    line();
+     } 
+      line("*"); //인수
+      line("&");
+      line("@");
     </script>
 </body>
 </html>

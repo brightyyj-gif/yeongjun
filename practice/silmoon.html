@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+</head>
+<body>
+    <div class="tabs">
+        <ul>
+            <li class="on"><a href="#">메뉴</a></li>
+            <li><a href="#">푸드</a></li>
+            <li><a href="#">MD</a></li>
+        </ul>
+        <div class="tab_con">
+        <div>메뉴 내용</div>
+        <div>푸드 내용</div>
+        <div>MD 내용</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(function () {
+    $('.tab_con > div').hide();
+    $('.tab_con > div').eq(0).show();
+
+    $('.tabs ul li').click(function (e) {
+        e.preventDefault();
+
+        let index = $(this).index();
+
+        $('.tabs ul li').removeClass('on');
+        $(this).addClass('on');
+
+        $('.tab_con > div').hide();
+        $('.tab_con > div').eq(index).show();
+    });
+});
+</script>

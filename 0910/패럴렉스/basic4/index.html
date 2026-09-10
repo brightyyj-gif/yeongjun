@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i'" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+         /* reset */
+        * {margin:0; padding:0; }
+        *, *::after, *::before {box-sizing: border-box;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        /* nav */
+        #nav {position: fixed; left: 0; top: 0px; width: 100%; height: 61px;
+        z-index: 1000; background-color: rgba(255,255,255,0.3); transition: all 0.3s ease;}
+        #nav.on {position: fixed; top: -61px;}
+        #nav h1 {float: left; color: #000; font-size: 40px; padding: 5px 5px 5px 15px; font-family: 'Abel' }
+
+        .section.s1{background-color: #d0cfc5;}
+        .section.s2{background-color: #ccc;}
+        .section.s3{background-color: #ddd;}
+        .section.s4{background-color: #eee;}
+        .section.s5{background-color: #ddd;}
+        .section.s6{background-color: #ccc;}
+
+        .section.s1{
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .section.s1 .sec1_text{
+            padding: 15vw 5vw 10vw 5vw; font-size: 8vw; line-height: 1.2;
+            margin: auto; color: #141417; font-family: 'Poppins', sans-serif;
+        }
+        /* 넓이가 줄면 글자크기 및 안여백도 감소 */
+        .section{
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; 
+            align-items: center;
+            color: #141417;
+            height: 100vh;
+            min-height: 600px;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* | 속성                    | 의미                   |
+| --------------------- | -------------------- |
+| `display: flex`       | 자식 요소들을 Flex 방식으로 배치 |
+| `flex-direction: row` | 가로 방향으로 배치           |
+| `flex-wrap: wrap`     | 공간이 부족하면 다음 줄로 내려감   |
+| `align-items: center` | 세로 방향 가운데 정렬         |
+| `height: 100vh`       | 화면 높이의 100%          |
+| `min-height: 600px`   | 아무리 작아도 높이 600px 유지  |
+| `overflow: hidden`    | 영역을 벗어난 내용을 숨김       |
+| `color: #141417`      | 기본 글자색               |
+| `font-family`         | Poppins 글꼴 사용        | */
+
+.section .sec_text {
+    width: 50vw;
+    font-size: 6vw;
+    line-height: 1.2;
+    text-align: right;
+    padding: 0 0 0 2em;
+}
+.section .sec_text.title_left{margin-left: -18vw;}
+.section .sec_img {width: 50vw;}
+.section img{width: 100%;}
+.section .sec_text {flex: none; position: relative;
+    z-index: 2; display: inline-block; white-space: nowrap;} 
+    .section .sec1_text .st1{margin-top: 160px;}
+    .section .sec1_text .st2{ }
+    .footer{
+        height: 500px;
+    }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <h1>WEB'S</h1>
+    </nav>
+
+    <main>
+        <section class="section s1">
+            <h2 class="sec1_text">
+                <div class="txt1">Parallax Scrolling</div>
+                <div class="txt2">Effects</div>
+            </h2>
+        </section>
+        <!-- //section1 -->
+        
+        <section class="section s2">
+            <h2 class="sec_text">
+                <div class="st1 scrolled1">funky foxes love1</div>
+                <div class="st2 scrolled2">technology</div>
+            </h2>
+            <figure class="sec_img">
+                <div class="si1 scrolled3"><img src="img/1.jpg" alt=""></div>
+            </figure>
+        </section>
+        <!-- //section2 -->
+        
+        <section class="section s3">
+            <figure class="sec_img">
+                <div class="si1 scrolled3"><img src="img/2.jpg" alt=""></div>
+            </figure>
+            <h2 class="sec_text title_left">
+                <div class="st1 scrolled1">funky foxes love1</div>
+                <div class="st2 scrolled2">technology</div>
+            </h2>
+        </section>
+        <!-- //section3 -->
+        
+        <section class="section s4">
+            <h2 class="sec_text">
+                <div class="st1 scrolled1">funky foxes love1</div>
+                <div class="st2 scrolled2">technology</div>
+            </h2>
+            <figure class="sec_img">
+                <div class="si1 scrolled3">
+            <img src="img/3.jpg" alt=""></div>
+            </figure>
+        </section>
+        <!-- //section4 -->
+        
+        <section class="section s5">
+            <figure class="sec_img">
+                <div class="si1 scrolled3"><img src="img/4.jpg" alt=""></div>
+            </figure>
+            <h2 class="sec_text title_left">
+                <div class="st1 scrolled1">funky foxes love1</div>
+                <div class="st2 scrolled2">technology</div>
+            </h2>
+        </section>
+        <!-- //section5 -->
+        
+        <section class="section s6">
+            <h2 class="sec_text">
+                <div class="st1 scrolled1">funky foxes love1</div>
+                <div class="st2 scrolled2">technology</div>
+            </h2>
+            <figure class="sec_img">
+                <div class="si1 scrolled3"><img src="img/5.jpg" alt=""></div>
+            </figure>
+        </section>
+        <!-- //section6 -->
+      <footer>
+      
+      </footer>
+    </main>
+</body>
+</html>
+<script>
+    $(window).scroll(function(){
+        var sct = $(window).scrollTop();
+        var offset2 = (sct - $(".s2").offset().top);
+        var offset3 = (sct - $(".s3").offset().top);
+        var offset4 = (sct - $(".s4").offset().top);
+        var offset5 = (sct - $(".s5").offset().top);
+        var offset6 = (sct - $(".s6").offset().top);
+
+        console.log(offset2, offset3, offset4, offset5, offset6)
+
+        if(sct >= $('.s2').offset().top - $(window).height()){
+            $('.s2 .sec_img').css({'transform':'translate('+offset2+'px, 0px)'});
+        }
+        if(sct >= $('.s3').offset().top - $(window).height()){
+            $('.s3 .sec_img').css({'transform':'translate('+offset3+'px, 0px)'});
+        }
+        if(sct >= $('.s4').offset().top - $(window).height()){
+            $('.s4 .sec_img').css({'transform':'translate(0px,'+offset4+'px)'});
+        }
+        if(sct >= $('.s5').offset().top - $(window).height()){
+            $('.s5 .sec_img').css({'transform':'translate(0px'+offset5*2+'px,)'})
+        }
+        if(sct >= $('.s6').offset().top - $(window).height()){
+            $('.s6 .sec_img').css({'transform':'translate('+offset6+'px, 0px)'})
+        }
+    });
+</script>

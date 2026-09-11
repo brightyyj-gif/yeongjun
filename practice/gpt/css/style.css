@@ -1,0 +1,214 @@
+/* =========================
+   기본 네비게이션
+========================= */
+
+.site-header {
+  position: relative;
+  z-index: 1000;
+}
+
+.pc-nav {
+  display: flex;
+  align-items: center;
+}
+
+.pc-nav > ul {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pc-nav a {
+  text-decoration: none;
+  color: #222;
+}
+
+
+/* 햄버거 버튼 - PC에서는 숨김 */
+.menu-toggle {
+  display: none;
+}
+
+
+/* =========================
+   모바일
+   1024px 이하
+========================= */
+
+@media (max-width: 1024px) {
+
+  /* PC 가로 메뉴 숨김 */
+  .pc-nav {
+    display: none;
+  }
+
+  /* 햄버거 버튼 표시 */
+  .menu-toggle {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #222;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  /* =========================
+     모바일 사이드 메뉴
+  ========================= */
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: min(85vw, 360px);
+    height: 100vh;
+
+    background: #fff;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+
+    overflow-y: auto;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    z-index: 1100;
+  }
+
+  /* 메뉴 열림 */
+  .mobile-nav.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav > ul {
+    margin: 0;
+    padding: 80px 25px 30px;
+    list-style: none;
+  }
+
+  .mobile-nav li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-nav a {
+    display: block;
+    padding: 16px 0;
+    color: #222;
+    text-decoration: none;
+  }
+
+
+  /* =========================
+     서브메뉴 아코디언
+  ========================= */
+
+  .mobile-nav .has-submenu > a {
+    position: relative;
+    padding-right: 30px;
+  }
+
+  .mobile-nav .has-submenu > a::after {
+    content: "+";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+
+  .mobile-nav .has-submenu.is-open > a::after {
+    content: "−";
+  }
+
+  .mobile-nav .submenu {
+    display: none;
+    margin: 0;
+    padding: 0 0 10px 15px;
+    list-style: none;
+  }
+
+  .mobile-nav .has-submenu.is-open > .submenu {
+    display: block;
+  }
+
+  .mobile-nav .submenu a {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+
+  /* =========================
+     배경 오버레이
+  ========================= */
+
+  .menu-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s, visibility 0.3s;
+
+    z-index: 1050;
+  }
+
+  .menu-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  /* =========================
+     햄버거 → X
+  ========================= */
+
+  .menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+
+/* =========================
+   PC 화면
+   1025px 이상
+========================= */
+
+@media (min-width: 1025px) {
+
+  .menu-toggle,
+  .mobile-nav,
+  .menu-overlay {
+    display: none !important;
+  }
+
+}

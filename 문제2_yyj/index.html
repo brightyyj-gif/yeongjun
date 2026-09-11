@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <style>
+* {margin: 0;padding: 0;box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+.tab {
+    width: 500px;
+    margin: 50px auto;
+}
+.tab_menu {
+    display: flex;
+}
+.tab_menu li {
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.tab_menu li.on {
+    background-color: #333;
+    color: #fff;
+}
+.tab_text > li {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+.tab_text > li.on {
+    display: block;
+}
+.tab_text > li div {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+</style>
+<script>
+    $(function () {
+    $(".tab_menu li").click(function () {
+        let index = $(this).index();
+        $(".tab_menu li").removeClass("on");
+
+        $(this).addClass("on");
+
+        $(".tab_text > li").removeClass("on");
+
+        $(".tab_text > li").eq(index).addClass("on");
+    });
+});
+
+</script>
+</head>
+<body>
+    <div class="tab">
+        <ul class="tab_menu">
+            <li class="on">공지사항</li>
+            <li>독서 문화 행사</li>
+        </ul>
+        <ul class="tab_text">
+            <li class="on">
+                <div>안녕하세요</div>
+                <div>반갑습니다</div>
+            </li>
+            <li>
+                <div>잘부탁드려요</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

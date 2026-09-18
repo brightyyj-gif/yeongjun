@@ -31,17 +31,20 @@ const {username, email} = inputs; //구조분해할당
     {
       id: 1,
       username: 'velopert',
-      email: 'public.velopert@gmail.com'
+      email: 'public.velopert@gmail.com',
+      active:true
     },
     {
       id: 2,
       username: 'tester',
-      email: 'tester@example.com'
+      email: 'tester@example.com',
+      active:true
     },
     {
       id: 3,
       username: 'liz',
-      email: 'liz@example.com'
+      email: 'liz@example.com',
+      active:false
     }
   ]);
   const nextId = useRef(4); //초기값을 4지정(더미데이터로 아이디 이미3번지정)
@@ -92,7 +95,7 @@ const {username, email} = inputs; //구조분해할당
       onChange={onChange} 
       onCreate={onCreate}
      />
-     <UserList users={users} onRemove={onRemove} onToggle={onToggle/>
+     <UserList users={users} onRemove={onRemove} onToggle={onToggle}/>
      </div>
   )
 }

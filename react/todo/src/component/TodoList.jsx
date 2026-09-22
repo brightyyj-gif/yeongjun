@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Todoitem from './Todoitem';
 import './TodoList.css';
 
-function TodoList({todo, onCreate, onUpdate, onDelete}) {
+function TodoList({todo, onUpdate, onDelete}) {
     const [search, setSearch] = useState("");
     const onChangeSearch = (e) =>{
     setSearch(e.target.value);

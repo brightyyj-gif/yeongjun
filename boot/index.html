@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BOOT LAYOUT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<!-- Header + Nav -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container">
+
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-bootstrap me-2"></i>BOOT LAYOUT
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">홈</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cards">카드</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">소개</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">문의</a>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <input
+          type="text"
+          class="form-control me-2"
+          placeholder="검색"
+        >
+        <button class="btn btn-primary" type="button">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- Header -->
+<header class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Bootstrap Grid + Card</h1>
+    <p class="lead">
+      row + col-md-4 로 카드 3개를 배치합니다.
+    </p>
+  </div>
+</header>
+
+
+<!-- Grid + Card -->
+<main class="container my-5" id="cards">
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-laptop display-4 text-primary mb-3"></i>
+
+          <h3 class="card-title">웹 개발</h3>
+
+          <p class="card-text">
+            HTML, CSS, Bootstrap으로
+            반응형 레이아웃을 구성합니다.
+          </p>
+
+          <a href="#" class="btn btn-primary">
+            자세히 보기
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-phone display-4 text-success mb-3"></i>
+
+          <h3 class="card-title">반응형</h3>
+
+          <p class="card-text">
+            모바일에서는 1열,
+            태블릿 이상에서는 3열로 자동 배치됩니다.
+          </p>
+
+          <a href="#" class="btn btn-success">
+            자세히 보기
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-grid-3x3-gap display-4 text-primary mb-3"></i>
+
+          <h3 class="card-title">그리드</h3>
+
+          <p class="card-text">
+            Bootstrap 12칸 그리드로
+            화면을 균등하게 나눕니다.
+          </p>
+
+          <a href="#" class="btn btn-primary">
+            자세히 보기
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-1">BOOT LAYOUT</p>
+    <small>Bootstrap Grid + Card Example</small>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

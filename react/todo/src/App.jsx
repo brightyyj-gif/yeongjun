@@ -1,6 +1,8 @@
+
 import Header from './component/Header'
 import { useState, useRef } from 'react';
 import TodoList from './component/TodoList';
+import TodoEditor from './component/TodoEditor';
 const mockTodo =[
   {
     id:0,
@@ -25,20 +27,22 @@ function App() {
    const[todo,setTodo] = useState(mockTodo);
     const idRef = useRef(3);
 
-    const onCreate = (content) =>{
-      const newItem = {
-        id:idRef.current,
-        content,
-        isDone : false,
-        createdDate: new Date().getTime(),
-      }
-      setTodo([newItem,...todo]);
-      idRef.current += 1;
-    }
+   const onCreate = (content) => {
+     const newItem = {
+       id:idRef.current,
+       content,
+       isDone :false,
+       createdDate : new Date().getTime(),
+     }
+     setTodo([newItem,...todo]);
+     idRef.current += 1;
+   }
 
     const onUpdate = (targetId) =>{
       setTodo(todo.map((it) =>{
-        return it.id === targetId ? {...it, isDone :!it.isDone} :it
+        return it.id === targetId ? {...it, isDone :!it.isDone } : it
+         //{id:1, content:"빨래하기",isDone:false} //기존
+         //{id:1, content:"빨래하기",isDone:true //update 실행후
       }))
     };
 
@@ -48,7 +52,8 @@ function App() {
   return (
     <div>
       <Header/>
-      <TodoList todo={todo} onCreate={onCreate} onUpdate={onUpdate} onDelete={onDelete}/>
+      <TodoEditor onCreate={onCreate}/>
+      <TodoList todo={todo} onUpdate={onUpdate} onDelete={onDelete}/>
       
     </div>
   )
